@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.row{
+    display:flex;
+}
+div.row div{
+    width: 20px;
+    height: 20px;
+}
+
+div.brick {
+    background-color: blue;
+}
+
+div.coin {
+    background: url('assets/coin.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div.emtpy {
+    background-color: black;
+}
+div.cherry {
+    background: url('assets/cherries.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div#pacman {
+    background: url('assets/pacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div#pacman2 {
+    background: url('assets/ms_pac_man.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+div#aqua-ghost{
+    background: url('assets/aqua-ghost.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+span#score, span#score2 {
+    border: 1px solid white;
+    width: 60px;
+    height: 30px;
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+div#scoreboard {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.label {
+    color: white;
+    width: 200px;
+}
