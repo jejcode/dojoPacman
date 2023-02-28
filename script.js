@@ -187,6 +187,8 @@ function bfs (pacman,ghost) {
         return false
     }
     var queue = [ghost]
+
+    //discovered nodes
     var parentCell = {}
 
     // while queue not empty
@@ -197,14 +199,13 @@ function bfs (pacman,ghost) {
         
         if(currentKey ==`${pacman.y}x${pacman.x}`) {
             break
-            //execute death function to kill pacman?
         }
 
         const neighbors = [
-            {y: y - 1, x},
-            {y, x: x + 1},
-            {y: y + 1, x},
-            {y, x: x - 1}
+            {y: y - 1, x}, // top
+            {y, x: x + 1}, // right
+            {y: y + 1, x}, // bottom
+            {y, x: x - 1}  // left
         ]
 
         for(var i = 0; i < neighbors.length; i++) {
@@ -249,9 +250,6 @@ function bfs (pacman,ghost) {
         current = cell
         currentKey = key
     }
-    //console.log(path.pop())
-    // ghost = path.pop()
-    // displayGhost()
     return path
 }
 
