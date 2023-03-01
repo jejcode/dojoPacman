@@ -273,13 +273,14 @@ var ghostTimer = setInterval(function() {
         let pathToPacman = pathTo(pacman)
         let pathToPacman2 = pathTo(pacman2)
         // console.log(pathToPacman,pathToPacman2)
-        
+        // if one path is false, auto choose the other
         let moveTo = (pathToPacman.length <= pathToPacman2.length) ? pathToPacman.path.pop() : pathToPacman2.path.pop()
         ghost = moveTo
         displayGhost()
         if(ghost.x == pacman.x && ghost.y == pacman.y) {
             lives--
             document.getElementById('pacman').remove()
+            //pathToPacman = []
             console.log('pacman died')
         }
         if(ghost.x == pacman2.x && ghost.y == pacman2.y) {
